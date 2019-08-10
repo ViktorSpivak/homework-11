@@ -1,0 +1,18 @@
+@mixin generate-services-icons {
+  @each $icon in photo, web, create, seo, c_h, digit {
+    .service__image--#{$icon} {
+      background-image: url(../images/icon-#{$icon}.png);
+    }
+  }
+}
+
+@mixin mask($opacity, $z-index) {
+  position: absolute;
+  content: "";
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  opacity: $opacity;
+  z-index: $z-index;
+}

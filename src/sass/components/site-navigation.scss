@@ -1,0 +1,44 @@
+.site-navigation {
+  @extend %ul-style;
+
+  &__list {
+    display: inline-block;
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+
+  &__icon {
+    display: inline-block;
+  }
+
+  &__link {
+    position: relative;
+    @extend %link;
+    font-size: $main-font-size;
+    color: $primary-color;
+    transition: color 200ms linear;
+
+    &::after {
+      content: "";
+      position: absolute;
+      transform: translate(-50%);
+      left: 50%;
+      bottom: -12px;
+      width: 0;
+      height: 3px;
+      background-color: #fce38a;
+      transition: opacity 200ms linear;
+      transition: width 200ms linear;
+      opacity: 0;
+    }
+
+    &:hover {
+      color: #fce38a;
+    }
+
+    &:hover::after {
+      opacity: 1;
+      width: 100%;
+    }
+  }
+}

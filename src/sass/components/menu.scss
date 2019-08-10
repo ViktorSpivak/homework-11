@@ -1,0 +1,12 @@
+.menu {
+  display: flex;
+  width: 100%;
+  max-width: 100%;
+  justify-content: space-between;
+  align-items: flex-start;
+
+  &--position {
+    padding-bottom: 128px;
+    padding-top: 24px;
+  }
+}

@@ -1,0 +1,18 @@
+.background {
+  position: relative;
+  width: 100%;
+  background-image: url(../images/main_background-min.png);
+  background-size: cover;
+  z-index: 0;
+
+  &::after {
+    @include mask(0.9, -1);
+    background: linear-gradient(to top, #f1d887, #ef8a8a);
+  }
+}
+
+@media (min-device-pixel-ratio: 2), (min-device-pixel-ratio: 2/1), (min-resolution: 192dpi) {
+  .background {
+    background: url(../images/main_background@2x-min.png);
+  }
+}

@@ -1,0 +1,8 @@
+.team {
+  @extend %ul-style;
+  display: inline-flex;
+  justify-content: space-between;
+  width: 100%;
+  margin-bottom: 50px;
+  margin-top: 90px;
+}

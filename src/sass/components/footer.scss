@@ -1,0 +1,56 @@
+.final {
+  position: relative;
+  display: inline-flex;
+  justify-content: space-between;
+  width: inherit;
+  align-items: center;
+  height: 62px;
+}
+
+.final::before {
+  position: absolute;
+  content: "";
+  width: inherit;
+  top: 0;
+  border: none;
+  height: 2px;
+  background-color: #999999;
+}
+
+.made-in {
+  position: relative;
+}
+
+.made-in__text {
+  display: inline-block;
+  font-family: "Montserrat", sans-serif;
+  font-size: $main-font-size;
+}
+
+.made-in__link {
+  display: inline;
+  text-decoration: none;
+}
+
+.made-in__link--color {
+  color: #f59191;
+}
+
+.send-form {
+  display: flex;
+  justify-content: space-between;
+  width: 380px;
+  height: 40px;
+  border-style: solid;
+  border-width: 1px;
+  border-color: $text-description-color;
+}
+
+.send-form__input {
+  border: none;
+  padding: 0;
+  font-family: "Roboto", sans-serif;
+  font-size: $additional-font-size;
+  font-style: italic;
+  font-weight: 300;
+}

@@ -1,0 +1,54 @@
+.services {
+  @extend %ul-style;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+
+  &__list {
+    padding-top: 50px;
+    padding-bottom: 50px;
+  }
+}
+
+.section__services {
+  padding-top: 66px;
+}
+
+.service {
+  display: flex;
+  align-items: flex-start;
+  width: 32%;
+  height: auto;
+
+  &__image {
+    @extend %image;
+    flex-basis: 20%;
+    height: 100%;
+    background-position-x: center;
+    background-repeat: no-repeat;
+  }
+
+  &__text {
+    flex-basis: 80%;
+  }
+
+  &__title {
+    margin: 0;
+    font-size: $main-font-size;
+    text-transform: uppercase;
+  }
+
+  &__description {
+    padding-top: 18px;
+    margin: 0;
+    font-family: $topic-font2;
+    font-size: $additional-font-size;
+    font-weight: 400;
+  }
+
+  &--color {
+    color: $text-description-color;
+  }
+}
+
+@include generate-services-icons;

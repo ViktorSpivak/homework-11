@@ -1,0 +1,62 @@
+.card {
+  width: 32%;
+  height: auto;
+
+  &__name {
+    font-size: $main-font-size;
+    text-transform: uppercase;
+  }
+
+  &__occupation {
+    font-family: "Roboto", sans-serif;
+    font-size: $additional-font-size;
+    font-weight: 300;
+    font-style: italic;
+    color: $text-description-color;
+  }
+
+  &__title {
+    @extend %topic--position;
+  }
+}
+
+.social {
+  position: relative;
+  width: 100%;
+  height: auto;
+  transition: transform 200ms linear;
+
+  &::before {
+    @include mask(1, -1);
+    background-color: $color-back;
+    transition: opacity 0.2s linear, transform 0.2s linear;
+  }
+
+  &::after {
+    @include mask(0, 0);
+    background: linear-gradient(to top, #f1d887, #ef8a8a);
+    transition: opacity 0.2s linear;
+  }
+
+  &:hover {
+    transform: translate(-10px, -10px);
+  }
+
+  &:hover::before {
+    transform: translate(10px, 10px);
+  }
+
+  &:hover::after {
+    opacity: 0.9;
+  }
+
+  &:hover .social__list {
+    opacity: 1;
+  }
+
+  &__image {
+    @extend %image;
+    width: 100%;
+    height: auto;
+  }
+}

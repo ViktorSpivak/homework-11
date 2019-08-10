@@ -1,0 +1,69 @@
+.main-topic {
+  @extend %topic--position;
+}
+
+.section__topic {
+  padding-top: 40px;
+}
+
+.main-topic__title {
+  position: relative;
+  display: block;
+  font-family: $topic-font1;
+  font-size: 72px;
+  color: $primary-color;
+}
+
+.main-topic__slogan {
+  font-size: 150px;
+  text-transform: uppercase;
+  font-weight: bold;
+  padding-bottom: 100px;
+  color: $primary-color;
+}
+
+.topic {
+  @extend %topic--position;
+
+  &::after {
+    content: "";
+    position: absolute;
+    left: 50%;
+    border: none;
+    width: 60px;
+    height: 3px;
+    background-color: #f38181;
+    transform: translateX(-50%);
+  }
+}
+
+.section__title {
+  margin: 0;
+  font-family: $topic-font1;
+  font-size: $topic-font-size2;
+  font-weight: normal;
+}
+
+.section__slogan {
+  margin: 0;
+  padding-top: 14px;
+  padding-bottom: 40px;
+  font-size: $topic-font-size1;
+  text-transform: uppercase;
+  font-weight: bold;
+}
+
+.section__occupation {
+  max-width: 980px;
+  margin: 0 auto;
+  width: 100%;
+  text-align: center;
+  font-family: $topic-font2;
+  font-size: $additional-font-size;
+  font-weight: 400;
+  padding-top: 40px;
+}
+
+.section__occupation--color {
+  color: $text-description-color;
+}
